@@ -1,0 +1,12 @@
+#!/bin/bash
+
+logfile=/var/log/syslog
+
+if [-f "$logfile"]; then
+	echo "found file"
+	count=$(wc -l "$logfile")
+	echo "count = $count"
+else
+	echo "File not found"
+	exit 1
+fi
